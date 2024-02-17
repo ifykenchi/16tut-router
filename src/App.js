@@ -11,6 +11,8 @@ import { Route, Routes } from "react-router-dom";
 import { useStoreActions } from "easy-peasy";
 
 function App() {
+	// you don't deploy json-server. You can deploy local storage
+
 	const setPosts = useStoreActions((actions) => actions.setPosts);
 	const { data, fetchError, isLoading } = useAxiosFetch(
 		"http://localhost:3500/posts"
